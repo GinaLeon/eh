@@ -1,0 +1,107 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+ string answer;
+ double Q, q, m, f;
+  
+ 
+class grade {
+  public:
+    void a() {
+      cout << "Please enter name: ";
+        getline(cin,answer);
+
+    }
+};
+
+class quiz : public grade {
+  public:
+    void a() { 
+      cout << "Enter Quiz 1 score(max is 10)";
+        cin>> Q;
+
+    }
+};
+
+class Quiz : public grade {
+  public:
+    void a() { 
+      cout << "Enter Quiz 1 score(max is 10)";
+        cin>>q;
+
+    }
+};
+class Midterm : public grade {
+  public:
+    void a() { 
+      cout << "Enter Midterm score (max is 100)";
+        cin>>m;
+
+    }
+};
+class Final : public grade {
+  public:
+    void a() { 
+      cout << "Enter Final score (max is 100)";
+        cin>>f;
+
+    }
+};
+
+int main() {
+double z,y,x,w,Z,Y,X,W,v,V,u;
+      
+    grade mygrade;
+    quiz myquiz;
+    Quiz myQuiz;
+    Midterm myMidterm;
+    Final myFinal;
+    
+    mygrade.a();
+    myquiz.a();
+    myQuiz.a();
+    myMidterm.a();
+    myFinal.a();
+   
+    z=Q/10;
+    y=q/10;
+    x=m/100;
+    w=f/100;
+    v=Q+q+m+f;
+    Z=12.5*z;
+    Y=12.5*y;
+    X=25*x;
+    W=50*w;
+    V=220-v;
+    u=Z+Y+X+W;
+    
+    cout<<"Here is the results for "<<answer<<"\n\n"<<endl;
+    
+    cout<<"TEST     YOUR SCORE      MAX SCORE       AVERAGE SCORE\n\n";
+    cout<<"Quiz 1        "<<Q<<"               10             "<<Z<<"%"<<endl;
+    cout<<"Quiz 2        "<<q<<"               10            "<<Y<<"%"<<endl;
+    cout<<"Midterm      "<<m<<"               100               "<<X<<"%"<<endl;
+    cout<<"Final        "<<f<<"                100                "<<W<<"%"<<endl;
+    cout <<"__________________________________________________________"<<"%"<<endl;
+    
+    cout<<"Total        "<<v<<"             220             "<<u<<"%"<<endl;
+ 
+cout<<"Numeric Average: "<<u<<"%"<<endl;  
+ if (u >= 90) {
+    cout << "Final Grade: A" << endl;
+} else if (u >= 80 && u <= 89) {
+    cout << "Final Grade: B" << endl;
+} else if (u >= 70 && u <= 79) {
+    cout << "Final Grade: C" << endl;
+} else if (u >= 64 && u <= 69) {
+    cout << "Final Grade: D" << endl;
+} else if (u >= 63) {
+    cout << "Final Grade: D" << endl;
+} else {
+    cout << "Final Grade: F" << endl;
+}
+
+ 
+  return 0;}
+
